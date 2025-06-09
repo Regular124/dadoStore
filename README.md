@@ -1,3 +1,9 @@
+Простой одностраничный сайт магазина. Бэкенда нет.
+Дизайна нет, возможно подстроить под заказчика.
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
