@@ -104,7 +104,6 @@ const cardData = [
   },
 ];
 
-// хуяк хуяк и в продакшн
 const SeriesData = [
   {
     title: "STAR WARS",
@@ -134,11 +133,6 @@ const SeriesData = [
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [Assortiment, setAssortiment] = useState(1);
-  const [Series, setSeries] = useState(2);
-  const [AboutMag, setAboutMag] = useState(3);
-  const [InterestingAsf, setInterestingAsf] = useState(4);
-  const [AnotherBusiness, setAnotherBusiness] = useState(5);
   const [regular124, setregular124] = useState(1);
 
   return (
