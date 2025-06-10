@@ -9,6 +9,8 @@ const cardData = [
     price: "18.000 рублей",
     Stock: "3",
     imageUrl: "/pics/75354.webp",
+    MoreInfo: '',
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -18,6 +20,8 @@ const cardData = [
     price: "2.500 рублей",
     Stock: "2",
     imageUrl: "/pics/75378.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -27,6 +31,8 @@ const cardData = [
     price: "40.000 рублей",
     Stock: "4",
     imageUrl: "/pics/75190.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -36,6 +42,8 @@ const cardData = [
     price: "20.000 рублей",
     Stock: "1",
     imageUrl: "/pics/75336.jpg",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -45,6 +53,8 @@ const cardData = [
     price: "15.000 рублей",
     Stock: "4",
     imageUrl: "/pics/75374.jpg",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -54,6 +64,8 @@ const cardData = [
     price: "18.000 рублей",
     Stock: "8",
     imageUrl: "/pics/75323.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -63,6 +75,8 @@ const cardData = [
     price: "25.000 рублей",
     Stock: "3",
     imageUrl: "/pics/75355.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -72,6 +86,8 @@ const cardData = [
     price: "13.000 рублей",
     Stock: "6",
     imageUrl: "/pics/75393.jpg",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -81,6 +97,8 @@ const cardData = [
     price: "15.000 рублей",
     Stock: "3",
     imageUrl: "/pics/76156.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -90,6 +108,8 @@ const cardData = [
     price: "30.000 рублей",
     Stock: "1",
     imageUrl: "/pics/75315.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -99,6 +119,8 @@ const cardData = [
     price: "20.000 рублей",
     Stock: "1",
     imageUrl: "/pics/75394.webp",
+    MoreInfo: "",
+    MorePics: "",
     tags: ["#star_wars"],
     archived: false,
   },
@@ -161,11 +183,11 @@ export default function App() {
         </div>
         <nav >
           <ul className="menu" >
-            <button className={`tab-button ${regular124 == 1 ? "active" : " "}`} onClick={() => setregular124(1)}>Ассортимент </button>
-            <button className={`tab-button ${regular124 == 2 ? "active" : " "}`} onClick={() => setregular124(2)}>Серии </button>
-            <button className={`tab-button ${regular124 == 3 ? "active" : " "}`} onClick={() => setregular124(3)}>О магазине </button>
-            <button className={`tab-button ${regular124 == 4 ? "active" : " "}`} onClick={() => setregular124(4)}>Интересные Факты </button>
-            <button className={`tab-button ${regular124 == 5 ? "active" : " "}`} onClick={() => setregular124(5)}>Иные услуги</button>
+            <button onClick={() => setregular124(1)}>Ассортимент </button>
+            <button onClick={() => setregular124(2)}>Серии </button>
+            <button onClick={() => setregular124(3)}>О магазине </button>
+            <button onClick={() => setregular124(4)}>Интересные Факты </button>
+            <button onClick={() => setregular124(5)}>Иные услуги</button>
             <input type="text" name="searchstring" id="searchstring" class="header__search-input" placeholder="Бэкенда нет" autocomplete="off"></input>
           </ul>
         </nav>
@@ -173,22 +195,6 @@ export default function App() {
     );
   }
 
-  function Card({ cardObj }) {
-    return (
-      <div className="card">
-        <a href={cardObj.imageUrl} >
-          <img className="card-image" src={cardObj.imageUrl} alt={cardObj.title} />
-        </a>
-        <div className="card-content">
-          <h2 className="card-title">{cardObj.title}</h2>
-          <h1 className="card-title">{cardObj.price}</h1>
-          <p className="card-description">{cardObj.description}</p>
-          <p className="card-Stock">В наличии: {cardObj.Stock} ед.</p>
-          <button className="Buy"> Buy</button>
-        </div>
-      </div>
-    )
-  }
   // regular124
   function Assortiment1() {
     return regular124 == 1 ? (
@@ -203,7 +209,6 @@ export default function App() {
           </div>
         </div>
       </div>) : ''
-
   }
 
   function Reklama() {
@@ -219,6 +224,23 @@ export default function App() {
         <div><img src="/pics/PPR.png" width={200} height={100} ></img></div>
         <div><img src="/pics/rutor.jpg" width={200} height={200} ></img></div>
 
+      </div>
+    )
+  }
+
+  function Card({ cardObj }) {
+    return (
+      <div className="card">
+        <a href={cardObj.imageUrl} >
+          <img className="card-image" src={cardObj.imageUrl} alt={cardObj.title} />
+        </a>
+        <div className="card-content">
+          <h2 className="card-title">{cardObj.title}</h2>
+          <h1 className="card-title">{cardObj.price}</h1>
+          <p className="card-description">{cardObj.description}</p>
+          <p className="card-Stock">В наличии: {cardObj.Stock} ед.</p>
+          <button className="Buy"> Buy</button>
+        </div>
       </div>
     )
   }
