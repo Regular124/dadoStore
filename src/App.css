@@ -1,0 +1,147 @@
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #343434;
+      flex-direction: column;
+      background: #f3f3f3;
+
+    }
+
+    .header {
+      font-family: 'Shlapak Script', arial;
+      background-color: aliceblue;
+      margin: 0 auto;
+      padding: 3px 24px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      background: #afaaaa;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      gap: 40px;
+      margin: 0;
+    }
+
+    h2 {
+      margin-left: 20px;
+    }
+
+    .dadoHeader {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .DadoImage {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .DadoImage2 {
+      display: flex;
+      flex-direction: row;
+      margin-left: -10px;
+      margin-right: 10px;
+    }
+
+    .assortiment {
+      display: flex;
+    }
+
+    .reklama {
+      background: rgb(60, 36, 77);
+      color: darkorange;
+    }
+
+    A {
+      color: rgb(151, 117, 75);
+    }
+
+    .info {
+      color: rgb(177, 168, 168);
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 280px;
+      margin: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .card-title {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    h2.card-title {
+      height: 62px;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .card-date {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .card-tags {
+      margin-top: 10px;
+    }
+
+    .card-tag {
+      background-color: #eee;
+      padding: 3px 8px;
+      margin-right: 5px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    footer {
+      background: #cfcbcb;
+      margin: 0px 0px 0px 0px;
+    }
+
+    .HiddenText {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Table {
+      min-height: 81vh;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .big {
+      width: 600px;
+      height: 600px;
+    }
